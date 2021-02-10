@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import FormUserDetails from "./FormUserDetails"
+import FormPersonalDetails from "./FormPersonalDetails"
 class UserForm extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -10,8 +12,11 @@ class UserForm extends Component {
             email: "",
             occupation: "",
             city: "",
-            bio: "",
-
+            // bio: "",
+            maritial_status: "",
+            village: "",
+            po: "",
+            district: ""
         }
         // this.handleChange = this.handleChange.bind(this)
     }
@@ -47,10 +52,20 @@ class UserForm extends Component {
                         handleChange={this.handleChange}
                         values={this.state.value}
                         onSubmit={this.handleSubmit}
+                        nextStep={this.nextStep}
+
                     />
                 )
             case 2:
-                return <h1>FormPersonalDetails</h1>
+                return (
+                    <FormPersonalDetails
+                        handleChange={this.handleChange}
+                        values={this.state.value}
+                        onSubmit={this.handleSubmit}
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                    />
+                )
             case 3:
                 return <h1>confirm</h1>
             case 4:
