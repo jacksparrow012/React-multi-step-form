@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import FormUserDetails from "./FormUserDetails"
 import FormPersonalDetails from "./FormPersonalDetails"
 import Success from "./Success"
+import Confirmation from "./Confirmation"
+import Alert from "./Alert"
 class UserForm extends Component {
 
     constructor(props) {
@@ -39,6 +41,10 @@ class UserForm extends Component {
 
     }
     handleSubmit = e => {
+        const { firstName, lastName, email, occupation, city, maritial_status, village, po, district } = this.state
+        if (firstName || lastName || email || occupation || city || maritial_status || village || po || district === " ") {
+            <Alert />
+        }
         e.preventDefault();
         console.log(this.state);
     }
@@ -75,7 +81,11 @@ class UserForm extends Component {
                     />
                 )
             case 4:
-                return <h1>success</h1>
+                return (
+                    <Confirmation />
+                )
+
+
         }
 
     }

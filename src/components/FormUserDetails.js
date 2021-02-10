@@ -19,6 +19,7 @@ render() {
                     value={values}
                     onChange={handleChange}
                     name="firstName"
+                    required
                 />
                 <br />
                 <Input
@@ -27,6 +28,7 @@ render() {
                     value={values}
                     onChange={handleChange}
                     name="lastName"
+                    required
                 />
                 <br />
                 <Input
@@ -35,6 +37,7 @@ render() {
                     value={values}
                     onChange={handleChange}
                     name="email"
+                    required
                 />
                 <br />
 
