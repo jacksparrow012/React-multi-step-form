@@ -1,5 +1,6 @@
 import React , { Component}from 'react';
 import { Form, Button, Input, Navbar } from "reactstrap"
+
 class FormUserDetails extends Component {
          continue=(e)=>{
         e.preventDefault();
@@ -93,14 +94,14 @@ render() {
                 />
                 <br />
                 <Button 
-                       className="btn btn-lg btn-info"
+                       className="btn btn-lg btn-info btn-block"
                        onClick={this.continue}
                        style={{marginRight:"5px"}}>
                        Continue
                 
                 </Button>
                 <Button 
-                       className="btn btn-lg btn-secondary"
+                       className="btn btn-lg btn-block btn-secondary"
                        onClick={this.back}>
                        Back
                 
